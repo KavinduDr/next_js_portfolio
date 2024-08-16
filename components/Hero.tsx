@@ -31,7 +31,7 @@ const Hero = () => {
                     />
 
                     <p className='text-center md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl'>
-                        Hi, I'm Kavindu. Web site Designer
+                        Hi I am Kavindu. Web site Designer
                     </p>
 
                     <a href="#about">
