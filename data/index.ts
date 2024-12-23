@@ -1,3 +1,6 @@
+import { link } from "fs";
+import { title } from "process";
+
 export const navItems = [
     { name: "About", link: "#about" },
     { name: "Projects", link: "#projects" },
@@ -214,4 +217,28 @@ export const navItems = [
       id: 3,
       img: "/link.svg",
     },
+  ];
+
+  export const myAchievements = [
+    {
+      title: "Python Basics",
+      link: "#",
+      thumbnail:
+        "/python.png",
+    },
+    {
+      title: "Agile",
+      link: "#",
+      thumbnail: "/agile.png",
+    },
+    {
+      title: "Dextron",
+      link: "#",
+      thumbnail: "/dextron.png",
+    },
+    {
+      title: "Encode",
+      link: "#",
+      thumbnail: "/encode.png"
+    }
   ];
