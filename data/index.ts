@@ -217,3 +217,31 @@ export const socialMedia = [
     img: "/link.svg",
   },
 ];
+
+export const certifications = [
+  {
+    id: 1,
+    title: "JavaScript",
+    img: "/javascript.png",
+  },
+  {
+    id: 2,
+    title: "Responsive Web Design",
+    img:"/responsive-web-design.png"
+  },
+  {
+    id: 3,
+    title: "Agile and Scrum",
+    img: "/agile.png",
+  },
+  {
+    id: 4,
+    title: "Python Basics",
+    img: "/python.png",
+  },
+  {
+    id: 5,
+    title: "IEEExTreme Encode",
+    img: "/encode.png",
+  }
+];
