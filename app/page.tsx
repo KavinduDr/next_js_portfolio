@@ -4,6 +4,7 @@ import Experience from "@/components/Experience";
 import Footer from "@/components/Footer";
 import Grid from "@/components/Grid";
 import Hero from "@/components/Hero";
+import MyProjects from "@/components/MyProjects";
 import RecentProjects from "@/components/RecentProjects";
 import { FloatingNav } from "@/components/ui/FloatingNav";
 import { TracingBeam } from "@/components/ui/tracing-beam";
@@ -19,9 +20,10 @@ export default function Home() {
           <FloatingNav navItems={navItems} />
           <Hero />
           <Grid />
+          <MyProjects />
           <Clients />
-          <Experience />
-          <Approach />
+          {/* <Experience /> */}
+          {/* <Approach /> */}
           <Footer />
           {/* <RecentProjects /> */}
         </TracingBeam>
