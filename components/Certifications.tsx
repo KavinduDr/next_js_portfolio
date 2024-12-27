@@ -32,7 +32,7 @@ const Certifications = () => {
                         {certifications.map((certification) => (
                             <CarouselItem key={certification.id} className="md:basis-1/2 lg:basis-1/1">
                                 <div className="p-2">
-                                    <Card>
+                                    <Card onClick={() => window.open(certification.link, '_blank')}>
                                         <CardContent className="flex aspect-square items-center justify-center p-6">
                                             <img src={certification.img} alt={certification.title} className="h-full w-full object-contain" />
                                         </CardContent>

@@ -1,9 +1,10 @@
+import { link } from "fs";
 import { title } from "process";
 
 export const navItems = [
   { name: "About", link: "#about" },
   { name: "Projects", link: "#projects" },
-  { name: "Testimonials", link: "#testimonials" },
+  // { name: "Testimonials", link: "#testimonials" },
   { name: "Contact", link: "#contact" },
 ];
 
@@ -51,7 +52,7 @@ export const gridItems = [
 
   {
     id: 5,
-    title: "Currently building a JS Animation library",
+    title: "Currently building an Assignment System",
     description: "The Inside Scoop",
     className: "md:col-span-3 md:row-span-2",
     imgClassName: "absolute right-0 bottom-0 md:w-96 w-60",
@@ -207,14 +208,17 @@ export const socialMedia = [
   {
     id: 1,
     img: "/git.svg",
+    link: "https://github.com/KavinduDr",
   },
   {
     id: 2,
     img: "/twit.svg",
+    link: "#",
   },
   {
     id: 3,
     img: "/link.svg",
+    link: "https://www.linkedin.com/in/kavindu-dhananjaya-rathnayaka-3228b3263",
   },
 ];
 
@@ -223,25 +227,30 @@ export const certifications = [
     id: 1,
     title: "JavaScript",
     img: "/javascript.png",
+    link: "https://www.freecodecamp.org/certification/KavinduDhananjaya/javascript-algorithms-and-data-structures",
   },
   {
     id: 2,
     title: "Responsive Web Design",
-    img:"/responsive-web-design.png"
+    img:"/responsive-web-design.png",
+    link: "https://www.freecodecamp.org/certification/KavinduDhananjaya/responsive-web-design",
   },
   {
     id: 3,
     title: "Agile and Scrum",
     img: "/agile.png",
+    link: "#",
   },
   {
     id: 4,
     title: "Python Basics",
     img: "/python.png",
+    link: "https://www.hackerrank.com/certificates/734c72a502cf",
   },
   {
     id: 5,
     title: "IEEExTreme Encode",
     img: "/encode.png",
+    link: "#",
   }
 ];
