@@ -218,7 +218,7 @@ export const socialMedia = [
   {
     id: 3,
     img: "/link.svg",
-    link: "https://www.linkedin.com/in/kavindu-dhananjaya-rathnayaka-3228b3263",
+    link: "www.linkedin.com/in/kavindu-dhananjaya-2b039b233",
   },
 ];
 
