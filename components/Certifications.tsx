@@ -11,7 +11,7 @@ const Certifications = () => {
     )
 
     return (
-        <div className='py-20' id='projects'>
+        <div className='py-20' id='certifications'>
             <h1 className='heading mb-5'>
                 A small collection of {' '}
                 <span className='text-purple'>my certifications</span>
