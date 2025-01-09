@@ -4,6 +4,7 @@ import { title } from "process";
 export const navItems = [
   { name: "About", link: "#about" },
   { name: "Projects", link: "#projects" },
+  {name:"Certifications", link:"#certifications"},
   // { name: "Testimonials", link: "#testimonials" },
   { name: "Contact", link: "#contact" },
 ];
