@@ -253,5 +253,11 @@ export const certifications = [
     title: "IEEExTreme Encode",
     img: "/encode.png",
     link: "#",
+  },
+  {
+    id: 6,
+    title: "Dextron - Fast Line following robot challenge",
+    img: "/dextron.jpeg",
+    link: "#",
   }
 ];
