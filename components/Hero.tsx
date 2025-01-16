@@ -3,8 +3,12 @@ import { Spotlight } from './ui/Spotlight'
 import { TextGenerateEffect } from './ui/TextGenerateEffect'
 import MagicButton from './ui/MagicButton'
 import { FaLocationArrow } from 'react-icons/fa'
+import { FlipWords } from './ui/flip-words'
 
 const Hero = () => {
+
+    const words = ["Full Stack", "Software"];
+
     return (
         <div className='pb-20 pt-36'>
             <div>
@@ -27,12 +31,12 @@ const Hero = () => {
 
                     <TextGenerateEffect 
                         className='text-center text-[40px] md:text-5xl lg:text-6xl'
-                        words='Transforming Concepts into Seamless User Experience'
+                        words='Hello, I am Kavindu Dhananjaya'
                     />
 
-                    <p className='text-center md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl'>
-                        Hi I am Kavindu. A Full Stack Developer and Cyber Security Enthusiast
-                    </p>
+                    <div className='text-center md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl'>
+                        A <FlipWords words={words} />Developer and Cyber Security Enthusiast
+                    </div>
 
                     <a href="#about">
                         <MagicButton 
