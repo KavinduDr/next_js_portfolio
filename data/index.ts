@@ -259,5 +259,11 @@ export const certifications = [
     title: "Dextron - Fast Line following robot challenge",
     img: "/dextron.jpeg",
     link: "#",
+  },
+  {
+    id: 7,
+    title: "Codefest - AI Sprint powered by Sysco Labs",
+    img: "/AI_Sprint.jpeg",
+    link: "#",
   }
 ];
