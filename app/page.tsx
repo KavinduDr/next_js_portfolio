@@ -1,6 +1,7 @@
 import Approach from "@/components/Approach";
 import Certifications from "@/components/Certifications";
 import Clients from "@/components/Clients";
+import CurvedLine from "@/components/CurvedLine";
 import Experience from "@/components/Experience";
 import Footer from "@/components/Footer";
 import Grid from "@/components/Grid";
@@ -28,6 +29,7 @@ export default function Home() {
           {/* <Approach /> */}
           <Footer />
           {/* <RecentProjects /> */}
+          {/* <CurvedLine /> */}
         </TracingBeam>
       </div>
     </main>
