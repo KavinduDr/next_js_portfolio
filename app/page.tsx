@@ -17,18 +17,18 @@ export default function Home() {
 
       <div className="max-w-7xl w-full">
         {/* <TracingBeam> */}
-          <FloatingNav navItems={navItems} />
-          <Hero />
-          <Grid />
-          <MyProjects />
-          {/* <Clients /> */}
-          <Certifications />
-          {/* <Experience /> */}
-          {/* <Approach /> */}
-          <Footer />
-          {/* <RecentProjects /> */}
-          {/* <CurvedLine /> */}
-          <TimelineSection />
+        <FloatingNav navItems={navItems} />
+        <Hero />
+        <Grid />
+        <MyProjects />
+        {/* <Clients /> */}
+        <Certifications />
+        <TimelineSection />
+        {/* <Experience /> */}
+        {/* <Approach /> */}
+        <Footer />
+        {/* <RecentProjects /> */}
+        {/* <CurvedLine /> */}
         {/* </TracingBeam> */}
       </div>
     </main>
