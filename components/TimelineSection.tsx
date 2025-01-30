@@ -98,8 +98,8 @@ const TimelineSection = () => {
     return (
         <div className='w-full'>
             <h1 className='heading'>
-                Not only Studies {' '}
-                <span className='text-purple'>I&apos;ve participated</span>
+                I&apos;ve {' '}
+                <span className='text-purple'> participated</span>
             </h1>
             <Timeline data={data} />
         </div>
