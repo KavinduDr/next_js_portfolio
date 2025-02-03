@@ -12,7 +12,11 @@ const SmoothProjects = () => {
         offset: ['start start', 'end end']
     })
     return (
-        <div ref={container}>
+        <div ref={container} id='projects'>
+            <h1 className='heading'>
+                A small selection of {' '}
+                <span className='text-purple'>recent projects</span>
+            </h1>
             {
 
                 project_cards.map((project, i) => {
