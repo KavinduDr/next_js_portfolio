@@ -36,7 +36,7 @@ const Card: React.FC<CardProps> = ({ title, description, src, url, color, i, pro
                 <div className='flex h-[100%] mt-[50px] gap-[50px]'>
                     {/* description */}
                     <div className='w-[40%] relative t-[10%]'>
-                        <p className='text-md'>{description}</p>
+                        <p className='text-sm md:text-md'>{description}</p>
                         <span className='flex items-center gap-[5px]'>
                             <a className='text-sm decoration-none cursor-pointer' href={url} target="_blank">See More</a>
                             <svg width="22" height="12" viewBox="0 0 22 12" fill="none">
@@ -47,7 +47,7 @@ const Card: React.FC<CardProps> = ({ title, description, src, url, color, i, pro
                         </span>
                     </div>
                     {/* image container */}
-                    <div className='relative w-[60%] h-[100%] rounded-md overflow-hidden'>
+                    <div className='relative w-[60%] h-[90%] rounded-md overflow-hidden'>
                         {/* inner */}
                         <motion.div className='w-[100%] h-[100%]' style={{scale: imageScale}}>
                             <Image className='object-cover' width={500} height={500} src={src} alt='image' />

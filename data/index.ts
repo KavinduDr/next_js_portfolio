@@ -270,24 +270,17 @@ export const certifications = [
 
 export const project_cards = [
   {
-    title: "Matthias Leidinger",
-    description: "Originally hailing from Austria, Berlin-based photographer Matthias Leindinger is a young creative brimming with talent and ideas.",
-    src: "/encode.png",
-    url: "https://www.ignant.com/2023/03/25/ad2186-matthias-leidingers-photographic-exploration-of-awe-and-wonder/",
-    color: "#BBACAF"
+    title: "Event Planning Mobile App",
+    description: "A mobile application to plan your events ahead of time. Built with flutter and dart. Utilises firebase as the backend of this project.",
+    src: "/event-planner.png",
+    url: "#",
+    color: "#1b1027"
   },
   {
-    title: "Clément Chapillon",
-    description: "This is a story on the border between reality and imaginary, about the contradictory feelings that the insularity of a rocky, arid, and wild territory provokes”—so French photographer Clément Chapillon describes his latest highly captivating project Les rochers fauves (French for ‘The tawny rocks’).",
-    src: "/agile.png",
-    url: "https://www.ignant.com/2022/09/30/clement-chapillon-questions-geographical-and-mental-isolation-with-les-rochers-fauves/",
-    color: "#977F6D"
-  },
-  {
-    title: "Zissou",
-    description: "Though he views photography as a medium for storytelling, Zissou’s images don’t insist on a narrative. Both crisp and ethereal, they’re encoded with an ambiguity—a certain tension—that lets the viewer find their own story within them.",
-    src: "/python.png",
-    url: "https://www.ignant.com/2023/10/28/capturing-balis-many-faces-zissou-documents-the-sacred-and-the-mundane-of-a-fragile-island/",
-    color: "#C2491D"
+    title: "A Breast Cancer Prediction Application",
+    description: "An application with Graphical User Interface to predict breast cancers of a certain person. Built with python and tensorflow, this application uses neural networks to make the prediction process",
+    src: "/cancer.png",
+    url: "#",
+    color: "#240041"
   },
 ]
