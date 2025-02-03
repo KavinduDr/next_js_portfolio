@@ -30,7 +30,7 @@ const Card: React.FC<CardProps> = ({ title, description, src, url, color, i, pro
         // {card container}
         <div className='flex h-[100vh] items-center justify-center sticky top-0'>
         {/* // {card} */}
-            <motion.div className='flex flex-col relative h-[500px] w-[1000px] rounded-lg p-[50px] origin-top' style={{ backgroundColor: color,scale, top:`calc(-5vh + ${i * 25}px)`}}>
+            <motion.div className='flex flex-col relative h-full w-[1000px] rounded-lg p-[50px] origin-top' style={{ backgroundColor: color,scale, top:`calc(-5vh + ${i * 25}px)`}}>
                 <h2 className='text-2xl text-center m-0'>{title}</h2>
                 {/* {body} */}
                 <div className='flex h-[100%] mt-[50px] gap-[50px]'>
