@@ -30,8 +30,8 @@ const Card: React.FC<CardProps> = ({ title, description, src, url, color, i, pro
         // {card container}
         <div className='flex h-[100vh] items-center justify-center sticky top-0'>
         {/* // {card} */}
-            <motion.div className='flex flex-col relative h-full w-[1000px] rounded-lg p-[50px] origin-top' style={{ backgroundColor: color,scale, top:`calc(-5vh + ${i * 25}px)`}}>
-                <h2 className='text-2xl text-center m-0'>{title}</h2>
+            <motion.div className='flex flex-col relative h-full w-[1000px] rounded-lg p-[50px] origin-top shadow-md shadow-violet-900' style={{ backgroundColor: color,scale, top:`calc(15vh + ${i * 45}px)`}}>
+                <h2 className='text-3xl text-center m-0 font-bold'>{title}</h2>
                 {/* {body} */}
                 <div className='flex h-[100%] mt-[50px] gap-[50px]'>
                     {/* description */}

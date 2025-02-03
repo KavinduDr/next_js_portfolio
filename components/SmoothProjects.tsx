@@ -9,7 +9,7 @@ const SmoothProjects = () => {
     const container = useRef(null);
     const { scrollYProgress } = useScroll({
         target: container,
-        offset: ['start start', 'end end']
+        offset: ['start center', 'end end']
     })
     return (
         <div className='py-20 flex flex-col'>
@@ -17,7 +17,7 @@ const SmoothProjects = () => {
                 A small selection of {' '}
                 <span className='text-purple'>recent projects</span>
             </h1>
-            <div ref={container} id='projects' className='mt-[10vh] mb-[1vh]'>
+            <div ref={container} id='projects' className='mt-[10vh] mb-[10vh]'>
                 {
 
                     project_cards.map((project, i) => {
