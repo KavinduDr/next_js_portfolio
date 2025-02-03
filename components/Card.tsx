@@ -1,7 +1,8 @@
 'use client'
 
+import { useScroll, useTransform, motion } from 'framer-motion';
 import Image from 'next/image'
-import React from 'react'
+import React, { useRef } from 'react'
 
 interface CardProps {
     title: string;
@@ -9,15 +10,27 @@ interface CardProps {
     src: string;
     url: string;
     color: string;
-    i: string | number;
+    i: number;
+    progress: any;
+    range: any;
+    targetScale: number;
 }
 
-const Card: React.FC<CardProps> = ({ title, description, src, url, color, i }) => {
+const Card: React.FC<CardProps> = ({ title, description, src, url, color, i, progress, range, targetScale }) => {
+
+    const container = useRef(null);
+    const { scrollYProgress } = useScroll({
+        target: container,
+        offset: ['start end', 'start start']
+    })
+    const imageScale = useTransform(scrollYProgress, [0,1], [2,1])
+    const scale = useTransform(progress, range, [1, targetScale]);
+
     return (
         // {card container}
         <div className='flex h-[100vh] items-center justify-center sticky top-0'>
         {/* // {card} */}
-            <div className='flex flex-col relative h-[500px] w-[1000px] rounded-lg p-[50px] origin-top'>
+            <motion.div className='flex flex-col relative h-[500px] w-[1000px] rounded-lg p-[50px] origin-top' style={{ backgroundColor: color,scale, top:`calc(-5vh + ${i * 25}px)`}}>
                 <h2 className='text-2xl text-center m-0'>{title}</h2>
                 {/* {body} */}
                 <div className='flex h-[100%] mt-[50px] gap-[50px]'>
@@ -36,12 +49,12 @@ const Card: React.FC<CardProps> = ({ title, description, src, url, color, i }) =
                     {/* image container */}
                     <div className='relative w-[60%] h-[100%] rounded-md overflow-hidden'>
                         {/* inner */}
-                        <div className='w-[100%] h-[100%]'>
+                        <motion.div className='w-[100%] h-[100%]' style={{scale: imageScale}}>
                             <Image className='object-cover' width={500} height={500} src={src} alt='image' />
-                        </div>
+                        </motion.div>
                     </div>
                 </div>
-            </div>
+            </motion.div>
         </div>
     )
 }
