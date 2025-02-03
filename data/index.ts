@@ -267,3 +267,20 @@ export const certifications = [
     link: "#",
   }
 ];
+
+export const project_cards = [
+  {
+    title: "Event Planning Mobile App",
+    description: "A mobile application to plan your events ahead of time. Built with flutter and dart. Utilises firebase as the backend of this project.",
+    src: "/event-planner.png",
+    url: "https://github.com/KavinduDr/mobileDevEventPlanner.git",
+    color: "#1b1027"
+  },
+  {
+    title: "A Breast Cancer Prediction Application",
+    description: "An application with Graphical User Interface to predict breast cancers of a certain person. Built with python and tensorflow, this application uses neural networks to make the prediction process",
+    src: "/cancer.png",
+    url: "https://github.com/KavinduDr/breast-cancer-prediction-with-NN.git",
+    color: "#240041"
+  },
+]

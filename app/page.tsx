@@ -5,6 +5,7 @@ import Footer from "@/components/Footer";
 import Grid from "@/components/Grid";
 import Hero from "@/components/Hero";
 import MyProjects from "@/components/MyProjects";
+import SmoothProjects from "@/components/SmoothProjects";
 import TimelineSection from "@/components/TimelineSection";
 
 import { FloatingNav } from "@/components/ui/FloatingNav";
@@ -20,7 +21,8 @@ export default function Home() {
         <FloatingNav navItems={navItems} />
         <Hero />
         <Grid />
-        <MyProjects />
+        {/* <MyProjects /> */}
+        <SmoothProjects />
         {/* <Clients /> */}
         <Certifications />
         <TimelineSection />

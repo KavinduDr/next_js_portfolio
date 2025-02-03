@@ -1,7 +1,7 @@
 "use client";
 import React, { useEffect, useRef } from "react";
 import MagicButton from "./ui/MagicButton";
-import { FaLocationArrow } from "react-icons/fa";
+import { FaDownload, FaLocationArrow } from "react-icons/fa";
 import { socialMedia } from "@/data";
 
 const Footer = () => {
@@ -99,10 +99,15 @@ const Footer = () => {
           Reach out today and let’s discuss how I can help you achieve your goals.
         </p>
 
-        {/* Contact Button */}
-        <a href="mailto:rmkavindudhananjaya@gmail.com" className="mt-6">
-          <MagicButton title="Let's get in touch" icon={<FaLocationArrow />} position="right" />
-        </a>
+        <div className="flex flex-col md:flex-row items-center justify-center gap-4">
+          {/* Contact Button */}
+          <a href="mailto:rmkavindudhananjaya@gmail.com" className="mt-6">
+            <MagicButton title="Let's get in touch" icon={<FaLocationArrow />} position="right" />
+          </a>
+          <a href="/cv.pdf" className="mt-6" download="cv">
+            <MagicButton title="Download CV" icon={<FaDownload />} position="right" />
+          </a>
+        </div>
       </div>
 
       {/* Footer Bottom Section */}
