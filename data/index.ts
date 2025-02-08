@@ -265,7 +265,13 @@ export const certifications = [
     title: "Codefest - AI Sprint powered by Sysco Labs",
     img: "/AI_Sprint.jpeg",
     link: "#",
-  }
+  },
+  {
+    id: 8,
+    title: "Red Team Mastery:Advanced Offensive Security",
+    img: "/redTeam.png",
+    link: "#",
+  },
 ];
 
 export const project_cards = [
