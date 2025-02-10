@@ -272,6 +272,12 @@ export const certifications = [
     img: "/redTeam.png",
     link: "#",
   },
+  {
+    id: 9,
+    title: "Complete Java Programming Bootcamp",
+    img: "/java_camp.png",
+    link: "#",
+  },
 ];
 
 export const project_cards = [
