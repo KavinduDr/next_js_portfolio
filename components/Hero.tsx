@@ -4,6 +4,8 @@ import { TextGenerateEffect } from './ui/TextGenerateEffect'
 import MagicButton from './ui/MagicButton'
 import { FaLocationArrow } from 'react-icons/fa'
 import { FlipWords } from './ui/flip-words'
+import Threads from './ui/Threads/Threads'
+import ShapeBlur from './ui/ShapeBlur/ShapeBlur'
 
 const Hero = () => {
 
@@ -20,7 +22,11 @@ const Hero = () => {
             <div className="h-screen w-full dark:bg-black-100 bg-white  dark:bg-grid-white/[0.06] bg-grid-black/[0.2] flex items-center justify-center absolute top-0 left-0">
                 {/* Radial gradient for the container to give a faded look */}
                 <div className="absolute pointer-events-none inset-0 flex items-center justify-center dark:bg-black-100 bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]" />
-                
+                <Threads
+                    amplitude={1}
+                    distance={0}
+                    enableMouseInteraction={true}
+                />
             </div>
 
             <div className='flex justify-center relative my-20 z-10'>
@@ -29,7 +35,7 @@ const Hero = () => {
                         Dynamic web majic of Next.js
                     </h2> */}
 
-                    <TextGenerateEffect 
+                    <TextGenerateEffect
                         className='text-center text-[40px] md:text-5xl lg:text-6xl'
                         words='Hello, I am Kavindu Dhananjaya'
                     />
@@ -39,7 +45,7 @@ const Hero = () => {
                     </div>
 
                     <a href="#about">
-                        <MagicButton 
+                        <MagicButton
                             title="Show my work"
                             icon={<FaLocationArrow />}
                             position="right"
