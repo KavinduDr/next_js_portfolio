@@ -17,6 +17,7 @@
     "embla-carousel-autoplay": "^8.5.1",
     "embla-carousel-react": "^8.5.1",
     "framer-motion": "^11.18.2",
+    "gl-matrix": "^3.4.3",
     "lucide-react": "^0.466.0",
     "mini-svg-data-uri": "^1.4.4",
     "next": "14.2.5",
