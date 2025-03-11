@@ -296,3 +296,42 @@ export const project_cards = [
     color: "#240041"
   },
 ]
+
+export const tech_items = [
+  {
+    image: '/py.png',
+    link: 'https://python.org/',
+    title: 'Python',
+    description: ''
+  },
+  {
+    image: '/react.png',
+    link: 'https://react.dev/',
+    title: 'React',
+    description: ''
+  },
+  {
+    image: '/js.png',
+    link: 'https://javascript.com/',
+    title: 'Javascript',
+    description: ''
+  },
+  {
+    image: '/typescript.png',
+    link: 'https://www.typescriptlang.org/',
+    title: 'Typescript',
+    description: ''
+  },
+  {
+    image: '/flutter.png',
+    link: 'https://www.flutter.dev/',
+    title: 'Flutter',
+    description: ''
+  },
+  {
+    image: '/cpp.png',
+    link: 'https://www.cpp-home.com/',
+    title: 'C++',
+    description: ''
+  }
+];
