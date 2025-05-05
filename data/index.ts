@@ -278,6 +278,12 @@ export const certifications = [
     img: "/java_camp.png",
     link: "#",
   },
+  {
+    id:10,
+    title: "Netwiz",
+    img: "/netwiz.png",
+    link: "#",
+  }
 ];
 
 export const project_cards = [
