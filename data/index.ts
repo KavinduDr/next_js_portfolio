@@ -213,8 +213,8 @@ export const socialMedia = [
   },
   {
     id: 2,
-    img: "/twit.svg",
-    link: "#",
+    img: "/medium.svg",
+    link: "https://medium.com/@rmkavindudhananjaya",
   },
   {
     id: 3,
