@@ -42,8 +42,8 @@ export const personalData = {
   location: "Anuradhapura, Sri Lanka",
   email: "rmkavindudhananjaya@gmail.com",
   phone: "+94 72 362 4661",
-  github: "https://github.com",
-  linkedin: "https://linkedin.com",
+  github: "https://github.com/KavinduDr",
+  linkedin: "https://linkedin.com/in/kavindu-dhananjaya-2b039b233/",
   summary: "Motivated BSc (Hons) Computer Engineering fresh graduate with a strong foundation in networking, systems programming, microservices, and cloud-native platforms. Former Software Engineering Intern at WSO2 Lanka with a focus on building security frameworks, scalable web applications, and developer experience tools.",
   education: {
     degree: "BSc (Hons) in Engineering – Computer Engineering",
