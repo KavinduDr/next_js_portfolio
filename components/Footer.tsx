@@ -1,136 +1,74 @@
 "use client";
-import React, { useEffect, useRef } from "react";
-import MagicButton from "./ui/MagicButton";
-import { FaDownload, FaLocationArrow } from "react-icons/fa";
-import { socialMedia } from "@/data";
 
-const Footer = () => {
-  const path = useRef<SVGPathElement>(null);
-  let progress = 0;
-  let x = 0.5;
-  let reqId: number | null = null;
-  let time = Math.PI / 2;
+import { personalData } from "@/data/portfolioData";
+import { GithubIcon, LinkedinIcon } from "@/components/Icons";
+import { ArrowUp, Mail, Heart } from "lucide-react";
 
-  useEffect(() => {
-    setPath({ value: progress });
-    const handleResize = () => setPath({ value: progress });
-
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
-
-  interface SetPathProps {
-    value: number;
-  }
-
-  const setPath = ({ value }: SetPathProps) => {
-    const width = window.innerWidth * 0.7;
-    if (path.current) {
-      path.current.setAttributeNS(
-        null,
-        "d",
-        `M 0 50 Q ${width * x} ${50 + value} ${width} 50`
-      );
-    }
-  };
-
-  const animateIn = () => {
-    if (reqId !== null) {
-      cancelAnimationFrame(reqId);
-      time = Math.PI / 2;
-    }
-    setPath({ value: progress });
-    reqId = requestAnimationFrame(animateIn);
-  };
-
-  const manageMouseMove = (e: React.MouseEvent<HTMLSpanElement>) => {
-    const movementY = (e as unknown as MouseEvent).movementY;
-    const box = (e.target as HTMLElement).getBoundingClientRect();
-    x = (e.clientX - box.left) / box.width;
-    progress += movementY;
-  };
-
-  const lerp = (x: number, y: number, a: number): number => x * (1 - a) + y * a;
-
-  const animateOut = () => {
-    let newProgress = progress * Math.sin(time);
-    setPath({ value: newProgress });
-
-    progress = lerp(progress, 0, 0.04);
-    time += 0.2;
-
-    if (Math.abs(progress) > 0.5) {
-      reqId = requestAnimationFrame(animateOut);
-    } else {
-      time = Math.PI / 2;
-      progress = 0;
-    }
-  };
-
-  const resetAnimation = () => {
-    if (reqId !== null) {
-      cancelAnimationFrame(reqId);
-      animateOut();
-    }
+export default function Footer() {
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   return (
-    <footer className="w-full pb-10 px-4 md:px-8 lg:px-16 mb-[100px] md:mb-5">
-      {/* Animated Line */}
-      <div className="relative w-full h-[1px] mb-5 bg-transparent">
-        <span
-          onMouseEnter={animateIn}
-          onMouseLeave={resetAnimation}
-          onMouseMove={manageMouseMove}
-          className="absolute top-[-20px] w-full h-10 z-[1] flex bg-transparent hover:h-[150px] hover:top-[-75px]"
-        ></span>
+    <footer className="bg-[#05070b] border-t border-slate-800/80 py-12 relative">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex flex-col md:flex-row items-center justify-between gap-6">
+          {/* Brand & Tagline */}
+          <div className="flex flex-col items-center md:items-start">
+            <a href="#" className="font-bold text-lg text-slate-100 tracking-tight mb-1">
+              Kavindu Dhananjaya<span className="text-cyan-400">.</span>
+            </a>
+            <p className="text-xs text-slate-400 text-center md:text-left">
+              BSc (Hons) Computer Engineering Fresh Graduate & Software Engineer
+            </p>
+          </div>
 
-        <svg className="absolute w-full h-[100px] top-[-50px]">
-          <path ref={path} className="stroke-white fill-none stroke-[1px]"></path>
-        </svg>
-      </div>
-
-      {/* Footer Content */}
-      <div className="flex flex-col items-center text-center">
-        <h1 className="text-2xl md:text-3xl lg:text-4xl font-semibold max-w-[85vw] lg:max-w-[45vw]">
-          Ready to take <span className="text-purple">your</span> digital presence to the next level?
-        </h1>
-        <p className="text-gray-400 text-sm md:text-base mt-4">
-          Reach out today and let’s discuss how I can help you achieve your goals.
-        </p>
-
-        <div className="flex flex-col md:flex-row items-center justify-center gap-4">
-          {/* Contact Button */}
-          <a href="mailto:rmkavindudhananjaya@gmail.com" className="mt-6">
-            <MagicButton title="Let's get in touch" icon={<FaLocationArrow />} position="right" />
-          </a>
-          <a href="/cv.pdf" className="mt-6" download="cv">
-            <MagicButton title="Download CV" icon={<FaDownload />} position="right" />
-          </a>
-        </div>
-      </div>
-
-      {/* Footer Bottom Section */}
-      <div className="flex flex-col md:flex-row items-center justify-between mt-12 space-y-6 md:space-y-0 w-full">
-        <p className="text-sm md:text-base text-gray-400">
-          Copyright © 2024 Kavindu Dhananjaya
-        </p>
-
-        {/* Social Media Icons */}
-        <div className="flex flex-wrap justify-center gap-4 md:gap-3">
-          {socialMedia.map((profile) => (
-            <div
-              key={profile.id}
-              className="w-10 h-10 cursor-pointer flex justify-center items-center backdrop-filter backdrop-blur-lg bg-opacity-75 bg-black-200 rounded-lg border border-gray-600 transition-transform hover:scale-110"
-              onClick={() => window.open(profile.link, "_blank")}
+          {/* Social Links */}
+          <div className="flex items-center gap-4">
+            <a
+              href={personalData.github}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-2 rounded-lg bg-slate-900 border border-slate-800 text-slate-400 hover:text-cyan-400 transition-colors"
+              aria-label="GitHub"
             >
-              <img src={profile.img} alt={profile.id.toString()} width={20} height={20} />
-            </div>
-          ))}
+              <GithubIcon className="w-4 h-4" />
+            </a>
+            <a
+              href={personalData.linkedin}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-2 rounded-lg bg-slate-900 border border-slate-800 text-slate-400 hover:text-indigo-400 transition-colors"
+              aria-label="LinkedIn"
+            >
+              <LinkedinIcon className="w-4 h-4" />
+            </a>
+            <a
+              href={`mailto:${personalData.email}`}
+              className="p-2 rounded-lg bg-slate-900 border border-slate-800 text-slate-400 hover:text-purple-400 transition-colors"
+              aria-label="Email"
+            >
+              <Mail className="w-4 h-4" />
+            </a>
+
+            {/* Back to Top */}
+            <button
+              onClick={scrollToTop}
+              className="p-2 rounded-lg bg-slate-900 border border-slate-800 text-cyan-400 hover:bg-slate-800 hover:text-white transition-all shadow-md"
+              title="Back to Top"
+            >
+              <ArrowUp className="w-4 h-4" />
+            </button>
+          </div>
+        </div>
+
+        <div className="mt-8 pt-6 border-t border-slate-800/60 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-400 gap-3">
+          <p>© {new Date().getFullYear()} Kavindu Dhananjaya. Built with Next.js & Tailwind CSS.</p>
+          <p className="flex items-center gap-1">
+            Designed for High Performance & Microservices Engineering
+          </p>
         </div>
       </div>
     </footer>
   );
-};
-
-export default Footer;
+}

@@ -1,40 +1,25 @@
-
-import Certifications from "@/components/Certifications";
-
-import Footer from "@/components/Footer";
-import Grid from "@/components/Grid";
+import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
-import MyProjects from "@/components/MyProjects";
-import SmoothProjects from "@/components/SmoothProjects";
-import Tech_stack from "@/components/Tech_stack";
-import TimelineSection from "@/components/TimelineSection";
-
-import { FloatingNav } from "@/components/ui/FloatingNav";
-import { TracingBeam } from "@/components/ui/tracing-beam";
-import { navItems } from "@/data";
+import About from "@/components/About";
+import Experience from "@/components/Experience";
+import Projects from "@/components/Projects";
+import Skills from "@/components/Skills";
+import Achievements from "@/components/Achievements";
+import Contact from "@/components/Contact";
+import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
-    <main className="relative bg-black-100 flex justify-center items-center flex-col mx-auto sm:px-10 px-5 overflow-clip">
-
-      <div className="max-w-7xl w-full">
-        {/* <TracingBeam> */}
-        <FloatingNav navItems={navItems} />
-        <Hero />
-        <Grid />
-        {/* <MyProjects /> */}
-        <SmoothProjects />
-        {/* <Clients /> */}
-        <Certifications />
-        <Tech_stack />
-        <TimelineSection />
-        {/* <Experience /> */}
-        {/* <Approach /> */}
-        <Footer />
-        {/* <RecentProjects /> */}
-        {/* <CurvedLine /> */}
-        {/* </TracingBeam> */}
-      </div>
+    <main className="min-h-screen bg-[#07090e] text-slate-100 selection:bg-cyan-500 selection:text-white">
+      <Navbar />
+      <Hero />
+      <About />
+      <Experience />
+      <Projects />
+      <Skills />
+      <Achievements />
+      <Contact />
+      <Footer />
     </main>
   );
 }
